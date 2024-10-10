@@ -24,12 +24,12 @@ const Navbar = () => {
   }, [darkMode]);
 
   return (
-    <nav className="bg-white dark:bg-gray-900 shadow-md">
+    <nav className="dark:bg-gray-900 bg-blue-950 shadow-md">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* Logo Section */}
           <div className="flex-shrink-0 flex items-center">
-            <a href="#" className="text-xl font-bold text-gray-800 dark:text-white">
+            <a href="#" className="text-xl font-bold text-white">
               Hotelrev
             </a>
           </div>
@@ -38,7 +38,7 @@ const Navbar = () => {
           <div className="flex items-center sm:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-800 dark:text-white focus:outline-none"
+              className="text-white focus:outline-none"
             >
               <MenuSquare />
             </button>
@@ -46,28 +46,40 @@ const Navbar = () => {
 
           {/* Links Section */}
           <div className="hidden sm:flex space-x-8 items-center">
-            <a href="#" className="text-gray-800 dark:text-white hover:text-gray-500 dark:hover:text-gray-300">
+            <a href="#" className="text-white hover:text-gray-500 dark:hover:text-gray-300">
               Home
             </a>
-            <a href="#" className="text-gray-800 dark:text-white hover:text-gray-500 dark:hover:text-gray-300">
+            <a href="#" className="text-white hover:text-gray-500 dark:hover:text-gray-300">
               About
             </a>
-            <a href="#" className="text-gray-800 dark:text-white hover:text-gray-500 dark:hover:text-gray-300">
+            <a href="#" className="text-white hover:text-gray-500 dark:hover:text-gray-300">
               Services
             </a>
-            <a href="#" className="text-gray-800 dark:text-white hover:text-gray-500 dark:hover:text-gray-300">
+            <a href="#" className="text-white hover:text-gray-500 dark:hover:text-gray-300">
               Contact
             </a>
-          </div>
+            <a href="#" className="text-white hover:text-gray-500 dark:hover:text-gray-300">
+              List Property
+            </a>
+            <div className=" bg-gray-700  p-2 rounded">
+              <select className="text-white outline-none order-none bg-transparent">
+                <option className='bg-black text-gray-400' value="">ENG</option> 
+                <option className='bg-black text-gray-400' value="">French</option> 
+                <option className='bg-black text-gray-400' value="">Spanish</option> 
+              </select>
+            </div>
+            
 
           {/* Dark Mode Toggle */}
           <div className="hidden sm:flex items-center space-x-4">
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="text-gray-800 dark:text-white bg-gray-200 dark:bg-gray-800 p-2 rounded"
+              className="text-white bg-gray-700  p-2 rounded"
             >
               {darkMode ? <Lightbulb/> : <LightbulbOff/>}
             </button>
+            <div className="border  rounded-full p-4"></div>
+          </div>
           </div>
         </div>
 
@@ -77,21 +89,21 @@ const Navbar = () => {
           }`}
         >
           <div className="pb-4 space-y-4 text-center">
-            <a href="#" className="block text-gray-800 dark:text-white hover:text-gray-500 dark:hover:text-gray-300">
+            <a href="#" className="block text-white hover:text-gray-500 dark:hover:text-gray-300">
               Home
             </a>
-            <a href="#" className="block text-gray-800 dark:text-white hover:text-gray-500 dark:hover:text-gray-300">
+            <a href="#" className="block text-white hover:text-gray-500 dark:hover:text-gray-300">
               About
             </a>
-            <a href="#" className="block text-gray-800 dark:text-white hover:text-gray-500 dark:hover:text-gray-300">
+            <a href="#" className="block text-white hover:text-gray-500 dark:hover:text-gray-300">
               Services
             </a>
-            <a href="#" className="block text-gray-800 dark:text-white hover:text-gray-500 dark:hover:text-gray-300">
+            <a href="#" className="block text-white hover:text-gray-500 dark:hover:text-gray-300">
               Contact
             </a>
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="block text-gray-800 dark:text-white bg-gray-200 dark:bg-gray-800 p-2 rounded m-auto"
+              className="block text-white bg-gray-700  p-2 rounded m-auto"
             >
               {darkMode ? <Lightbulb/> : <LightbulbOff/>}
             </button>
