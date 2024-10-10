@@ -26,7 +26,7 @@ const StayDuration = () => {
   };
 
   return (
-    <div className='relative lg:w-[350px] w-full border border-gray-600 rounded-lg flex gap-3 p-3'>
+    <div className='relative lg:w-[350px] w-full bg-white rounded-md flex gap-3 p-3'>
       <Calendar className='text-gray-600'/>
       <input
         type="text"

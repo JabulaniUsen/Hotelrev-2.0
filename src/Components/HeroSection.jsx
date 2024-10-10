@@ -43,13 +43,13 @@ function HeroSection() {
   return (
     <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5'>
       <h2 className='text-[#191e3b] mb-5 dark:text-white lg:text-4xl text-xl font-semibold'>Where to?</h2>
-      <div className="flex items-center justify-between gap-3 lg:flex-row flex-col">
-        <div className="w-full">
-          <div className="border border-gray-600 rounded-lg flex gap-3 p-3 lg:w-[350px] w-full">
+      <div className="flex items-center justify-between gap-1 p-1 rounded-lg bg-yellow-500 lg:flex-row flex-col">
+        <div className="w-full bg-white rounded-md">
+          <div className=" rounded-lg flex gap-3 p-3 lg:w-[300px] w-full">
             <MapPin className='text-gray-600' />
             <input 
               type="text" 
-              className='bg-transparent border-none outline-none  ' 
+              className='bg-transparent border-none outlne-none  ' 
               placeholder='Select your location' 
             />
           </div>
@@ -57,10 +57,10 @@ function HeroSection() {
         <div className="w-full">
           <StayDuration/>
         </div>
-        <div className="relative w-full">
+        <div className="relative w-full bg-white rounded-md">
           <div 
             onClick={ () => setShowRoomInfo(true)}
-            className="border cursor-pointer border-gray-600 rounded-lg flex gap-3 p-3 lg:w-[350px] w-full">
+            className="cursor-pointer  rounded-lg flex gap-3 p-3 lg:w-[300px] w-full">
               <User2 className='text-sm text-gray-600' />
               <div className="flex gap-4 text-sm items-center">
                 <p>Adults: <span className='font-bold'>{adults}</span></p>
@@ -86,14 +86,15 @@ function HeroSection() {
           
         </div>
         <motion.button 
-          className='rounded-lg dark:bg-blue-600 w-full bg-blue-900 text-white px-5 py-3 hover:to-blue-950 transitionn'
+          className='rounded-md dark:bg-blue-600 w-full bg-blue-900 text-white px-5 py-3 hover:to-blue-950 flex items-center justify-between'
           whileHover={{
             scale: 1.1,
             transition: { duration: 0.1 },
           }}
           whileTap={{ scale: 1.0 }}
           >
-            <Search/>
+            Search
+            <Search size={20}/>
           </motion.button>
       </div>
     </div>
