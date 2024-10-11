@@ -1,4 +1,4 @@
-import { Lightbulb, LightbulbOff, MenuSquare } from 'lucide-react';
+import { Lightbulb, LightbulbOff, MenuSquare, PhoneCall } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
 
 const Navbar = () => {
@@ -24,7 +24,7 @@ const Navbar = () => {
   }, [darkMode]);
 
   return (
-    <nav className="dark:bg-gray-900 bg-blue-950 shadow-md">
+    <nav className="dark:bg-gray-900 bg-[#003b95] shadow-md">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* Logo Section */}
@@ -47,21 +47,15 @@ const Navbar = () => {
           {/* Links Section */}
           <div className="hidden sm:flex space-x-8 items-center">
             <a href="#" className="text-white hover:text-gray-500 dark:hover:text-gray-300">
-              Home
+              Download app
             </a>
             <a href="#" className="text-white hover:text-gray-500 dark:hover:text-gray-300">
-              About
-            </a>
-            <a href="#" className="text-white hover:text-gray-500 dark:hover:text-gray-300">
-              Services
-            </a>
-            <a href="#" className="text-white hover:text-gray-500 dark:hover:text-gray-300">
-              Contact
+              <PhoneCall/>
             </a>
             <a href="#" className="text-white hover:text-gray-500 dark:hover:text-gray-300">
               List Property
             </a>
-            <div className=" bg-gray-700  p-2 rounded">
+            <div className=" bg-gray-500  p-2 rounded">
               <select className="text-white outline-none order-none bg-transparent">
                 <option className='bg-black text-gray-400' value="">ENG</option> 
                 <option className='bg-black text-gray-400' value="">French</option> 
@@ -74,7 +68,7 @@ const Navbar = () => {
           <div className="hidden sm:flex items-center space-x-4">
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="text-white bg-gray-700  p-2 rounded"
+              className="text-white bg-gray-500  p-2 rounded"
             >
               {darkMode ? <Lightbulb/> : <LightbulbOff/>}
             </button>
@@ -103,7 +97,7 @@ const Navbar = () => {
             </a>
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="block text-white bg-gray-700  p-2 rounded m-auto"
+              className="block text-white bg-gray-500  p-2 rounded m-auto"
             >
               {darkMode ? <Lightbulb/> : <LightbulbOff/>}
             </button>

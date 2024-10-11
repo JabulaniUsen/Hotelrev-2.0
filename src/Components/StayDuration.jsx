@@ -26,15 +26,15 @@ const StayDuration = () => {
   };
 
   return (
-    <div className='relative lg:w-[350px] w-full bg-white rounded-md flex gap-3 p-3'>
+    <div className='relative lg:w-[350px] w-full bg-white rounded-md flex gap-3 p-3 py-4'>
       <Calendar className='text-gray-600'/>
       <input
         type="text"
         readOnly
-        value={`In: ${format(dateRange[0].startDate, 'MM/dd/yyyy')} - Out: ${format(dateRange[0].endDate, 'MM/dd/yyyy')}`}
+        value={`In: ${format(dateRange[0].startDate, 'dd/MM/yyyy')} - Out: ${format(dateRange[0].endDate, 'dd/MM/yyyy')}`}
         onClick={() => setShowDateRangePicker(!showDateRangePicker)}
         placeholder="Select Date Range"
-        className='w-full bg-none cursor-pointer outline-none dark:text-white text-sm bg-transparent '
+        className='w-full bg-none cursor-pointer dark:text-black outline-none  text-sm bg-transparent '
       />
 
       {showDateRangePicker && (
